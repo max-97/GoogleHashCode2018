@@ -30,8 +30,7 @@ public class CarMain {
 			int numRides = numbers[3];
 			bonus = numbers[4];
 			int endTime = numbers[5];
-
-			//cars = new Car[numCars];
+			
 			cars = new ArrayList<>();
 			for (int i = 0; i < numCars; i++) {
 				cars.add(new Car(i));
