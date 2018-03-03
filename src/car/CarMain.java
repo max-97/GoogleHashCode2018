@@ -57,7 +57,7 @@ public class CarMain {
 			while (canGoOn) {
 				canGoOn = false;
 				for (int i = 0; i < cars.size(); i++) {
-					canGoOn = canGoOn || cars.get(i).findNextRide();
+					canGoOn = cars.get(i).findNextRide();
 					if (canGoOn)
 						break;
 				}

@@ -49,11 +49,13 @@ public class Car implements Comparable{
 			int d = r.getDistanceFrom(this.pos);
 
 			if (d + currentTime <= r.startTime) {
-				d = r.startTime;
+				d = r.startTime - currentTime;
 			}
 			double points = r.calcPoints(this);
 			double time = d + r.getLength();
 			double pPT = points / time;
+			// metric with pointsPerTime
+			//if (this.canAccomplish(r) && pointsPerTime < pPT) {
 			if (this.canAccomplish(r) && d < smallestD) {
 				smallestD = d;
 				ride = r;

@@ -9,6 +9,7 @@ public class Ride implements Comparable{
 	int startTime;
 	int endTime;
 	int index;
+	int length;
 
 	public Ride(int x, int y, int x2, int y2, int startT, int endT, int index) {
 		this.start = new Point(x, y);
@@ -16,6 +17,7 @@ public class Ride implements Comparable{
 		this.startTime = startT;
 		this.endTime = endT;
 		this.index = index;
+		this.length = getDistanceFrom(end);
 	}
 
 	public int getDistanceFrom(int x, int y) {
@@ -27,7 +29,7 @@ public class Ride implements Comparable{
 	}
 
 	public int getLength() {
-		return getDistanceFrom(end);
+		return length;
 	}
 
 	@Override
