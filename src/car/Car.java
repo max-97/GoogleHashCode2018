@@ -54,7 +54,7 @@ public class Car implements Comparable{
 			double points = r.calcPoints(this);
 			double time = d + r.getLength();
 			double pPT = points / time;
-			// metric with pointsPerTime
+			// metric with pointsPerTime does not work
 			//if (this.canAccomplish(r) && pointsPerTime < pPT) {
 			if (this.canAccomplish(r) && d < smallestD) {
 				smallestD = d;
